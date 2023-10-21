@@ -1,17 +1,60 @@
 <html><head>
-  <title>Slope</title>
-    <link rel="stylesheet" href="https://math.isreally.pro/service/hvtrs8%2F-mctjafvgnvupe3.eivhwb%2Cim%2Fqlmpg%2Fqlmpg%2FVeopnaveFava-svyne%2Ccqs" __uv-attr-href="TemplateData/style.css">
-    <script __uv-attr-src="https://www.id.net/api/user_data/autologin?callback=idnet_autologin&amp;app_id=55961e5ee694aa0ae90003e8" src="https://math.isreally.pro/service/hvtrs8%2F-wuw%2Cif.lev%2Fcpk%2Fwsgr%5Ddctc%2Fcuvonoeil%3Faanl%60aak%3Fifngt%5Dawtmlmgkn%24arp%5Dif%3D75%3B63e7eg6%3B4ca2ag92023g8"></script><script src="https://math.isreally.pro/service/hvtrs8%2F-mctjafvgnvupe3.eivhwb%2Cim%2Fqlmpg%2Fqlmpg%2FVeopnaveFava-UlivyRrmgpeqs%2Cjq" __uv-attr-src="TemplateData/UnityProgress.js"></script>
-    <script src="https://math.isreally.pro/service/hvtrs8%2F-mctjafvgnvupe3.eivhwb%2Cim%2Fqlmpg%2Fqlmpg%2FVeopnaveFava-ulivynocdgr61%2Cjq" __uv-attr-src="TemplateData/unityloader41.js"></script>
-    <script>
-        var gameInstance = UnityLoader.instantiate("gameContainer", "Build/slope.json", { onProgress: UnityProgress, Module: { onRuntimeInitialized: function() { UnityProgress(gameInstance, "complete") } } });
-    </script>
-</head>
-<body style="margin:0;overflow:hidden" __uv-attr-style="margin: 0; overflow: hidden;">
-    <div class="webgl-content">
-        <div id="gameContainer" style="width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; position: relative; background: rgb(35, 31, 32);" __uv-attr-style="width: 100%; height: 100%; margin: 0;"><canvas id="#canvas" width="1027" height="700" style="cursor: default;"></canvas><div class="logo Dark" style="display: none;"></div><div class="progress Dark" style="display: none;"><div class="empty" style="width: 0%;"></div><div class="full" style="width: 100%;"></div></div></div>
-    </div>
-<script __uv-attr-src="blob:https://mathadventure1.github.io/c5966dd1-ccb2-4cc0-8a20-59a0a278c96b" src="https://math.isreally.pro/service/bno%60%3Ajtvpq%3A-%2Foavhcdteltwrg1%2Cgktju%60.ko-c7946fd3-ac%602%2F4ac2-%3Aa00%2F5%3Ba2a07%3Ac%3B6%60"></script></body><style id="stylus-4" type="text/css" class="stylus">/* i really want this to be global */
+        <link rel="shortcut icon" href="./assets/images/icon.png" type="image/png">
+        <title>Slope | Art Class</title>
+
+        <link rel="stylesheet" href="./css/master.css">
+        
+        <script type="text/javascript" async="" src="https://hog.intoabyss.org/static/array.js"></script><script src="/uv/uv.bundle.js" charset="UTF-8"></script><style type="text/css" id="operaUserStyle">
+    video {
+      filter: -opera-shader(url(data:text/plain;base64,dW5pZm9ybSBzaGFkZXIgaUNodW5rOwp1bmlmb3JtIGZsb2F0MiBpQ2h1bmtTaXplOwoKY29uc3QgZmxvYXQgVEhSRVNIT0xEX0FSRUEgPSA4MDAgKiA2MDA7CmNvbnN0IGZsb2F0IE1JTl9BUkVBID0gNDAwICogMTAwOwpjb25zdCBmbG9hdCBNSU5fU1RSSVAgPSAyMDsKY29uc3QgZmxvYXQgTUFSR0lOID0gMTsKCmhhbGYzIHBpeGVsKGNvbnN0IGludCB4LCBjb25zdCBpbnQgeSwgaW4gaGFsZjIgeHkpCnsKCXJldHVybiBpQ2h1bmsuZXZhbCh4eSArIGhhbGYyKHgsIHkpKS5yZ2I7Cn0gIAoKaGFsZjMgUkdYKGhhbGYyIHh5KXsKCWhhbGYzIGYgPQoJcGl4ZWwoLTEsLTEsIHh5KSAqICAxLiArICAgICAgICAgICAgICAgICAgICAgCglwaXhlbCggMCwtMSwgeHkpICogLTEuICsgICAgICAgICAgICAgICAgICAgIAoJcGl4ZWwoIDEsLTEsIHh5KSAqICAxLiArCgkKCXBpeGVsKC0xLCAwLCB4eSkgKiAtMS4gKyAgICAgICAgICAgICAgICAgICAgCglwaXhlbCggMCwgMCwgeHkpICogLTIuICsgICAgICAgICAgICAgICAgICAgICAKCXBpeGVsKCAxLCAwLCB4eSkgKiAtMS4gKyAgICAgICAgICAgICAgICAgICAgIAoJCglwaXhlbCgtMSwgMSwgeHkpICogIDEuICsgICAgICAgICAgICAgICAgICAgICAKCXBpeGVsKCAwLCAxLCB4eSkgKiAtMS4gKyAgICAgICAgICAgICAgICAgICAgIAoJcGl4ZWwoIDEsIDEsIHh5KSAqICAxLgoJOwoJcmV0dXJuIGYgLyAtMjsKfQoKaGFsZjMgUkdYTW9yZShoYWxmMiB4eSl7CgloYWxmMyBmID0KCXBpeGVsKC0xLC0xLCB4eSkgKiAgMS4gKyAgICAgICAgICAgICAgICAgICAgIAoJcGl4ZWwoIDAsLTEsIHh5KSAqIC0xLiArICAgICAgICAgICAgICAgICAgICAKCXBpeGVsKCAxLC0xLCB4eSkgKiAgMS4gKwoJCglwaXhlbCgtMSwgMCwgeHkpICogLTEuICsgICAgICAgICAgICAgICAgICAgIAoJcGl4ZWwoIDAsIDAsIHh5KSAqIC0xLiArICAgICAgICAgICAgICAgICAgICAgCglwaXhlbCggMSwgMCwgeHkpICogLTEuICsgICAgICAgICAgICAgICAgICAgICAKCQoJcGl4ZWwoLTEsIDEsIHh5KSAqICAxLiArICAgICAgICAgICAgICAgICAgICAgCglwaXhlbCggMCwgMSwgeHkpICogLTEuICsgICAgICAgICAgICAgICAgICAgICAKCXBpeGVsKCAxLCAxLCB4eSkgKiAgMS4gCgk7CglyZXR1cm4gZiAvIC0xOwp9CgoKaGFsZjQgbWFpbihmbG9hdDIgeHkpCnsKCWhhbGY0IGNvbG9yID0gaUNodW5rLmV2YWwoeHkpOwoJCglpZiAoY29sb3IuYSA8IDEpIHsKCQlyZXR1cm4gY29sb3I7Cgl9CgkKCWlmIChpQ2h1bmtTaXplLnggKiBpQ2h1bmtTaXplLnkgPCBNSU5fQVJFQSkgewoJCXJldHVybiBjb2xvcjsKCX0KCglpZiAoaUNodW5rU2l6ZS55IDwgTUlOX1NUUklQIHx8IGlDaHVua1NpemUueCA8IE1JTl9TVFJJUCkgewoJCXJldHVybiBjb2xvcjsKCX0KCglpZiAoeHkueCA8IE1BUkdJTiB8fCB4eS54ID4gKGlDaHVua1NpemUueCAtIE1BUkdJTikgfHwKCSAgICB4eS55IDwgTUFSR0lOIHx8IHh5LnkgPiAoaUNodW5rU2l6ZS55IC0gTUFSR0lOKSkgewogICAgCXJldHVybiBjb2xvcjsgICAgCiAgICB9CgkKCWlmIChpQ2h1bmtTaXplLnggKiBpQ2h1bmtTaXplLnkgPiBUSFJFU0hPTERfQVJFQSkgewoJCWNvbG9yID0gaGFsZjQoUkdYTW9yZSh4eSksIDEpOwoJfSBlbHNlIHsKCQljb2xvciA9IGhhbGY0KFJHWCh4eSksIDEpOwoJfQoKCXJldHVybiBjb2xvcjsKfQo=));
+    }
+  </style>
+        <script src="/uv/uv.config.js"></script>
+        <script src="./js/preload.js"></script><link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css"><link href="https://cdn.jsdelivr.net/gh/ianlunn/hover/css/hover-min.css" rel="stylesheet"><script src="https://www.googletagmanager.com/gtag/js?id=G-66ZE075DLD" async=""></script>
+
+    <meta http-equiv="origin-trial" content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"></head>
+
+    <body theme="main">
+      
+        <nav>
+            <div class="logo">
+              <img src="./assets/images/icon.png" alt="Logo" draggable="false">
+              <h1>Art Class</h1>
+            </div>
+        
+            <p id="time"></p>
+        
+            <div class="navitems">
+                <div class="navitem"><a href="/">Home</a></div>
+                <div class="navitem"><a href="/gs.html">Games</a></div>
+                <div class="navitem"><a href="/apps.html">Apps</a></div>
+                <div class="navitem"><a href="/emulator.html">Emulator</a></div>
+                <div class="navitem"><a href="/search.html">Search</a></div>
+            </div>
+          </nav>
+
+          <div class="gamecontainer">
+            <iframe allowfullscreen="" frameborder="0" id="frame" src="/service/hvtrs8%2F-mctjafvgnvupe3.eivhwb%2Cim%2Fqlmpg%2Fqlmpg%2Fknfez.jtol"></iframe>
+            <div id="gameInfo">
+                <div class="yes">
+                    <img id="gameImage" alt="icon" src="https://play-lh.googleusercontent.com/uJn2i9h7KxYQarC_c3K4qH6o7gLtflFnhD_dN14MNkzHJ1NeNFzCL69jpB5mT0vCoQs">
+                    <h3 id="gameTitle">Slope</h3>
+                </div>
+                <p id="gameDescription"></p>
+                
+                <div id="menubtns">
+                    <a href="./gs.html"><button onclick="window.location.href = '/'"><i class="fas fa-arrow-left"></i></button></a>
+                    <button onclick="document.querySelector('iframe').requestFullscreen()"><i class="fas fa-expand"></i></button>
+                </div>
+            </div> 
+
+    
+    
+    <script src="./js/index.js"></script>
+    <script src="./assets/data/games.js"></script>
+    <script src="./assets/data/apps.js"></script>
+    <script src="./js/load.js"></script>
+</div></body><style id="stylus-4" type="text/css" class="stylus">/* i really want this to be global */
 .ytp-play-progress {
     animation:7s background linear infinite !important;
     -webkit-animation:7s background linear infinite !important;
